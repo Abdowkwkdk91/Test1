@@ -1,93 +1,45 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بحث عن حيوان الأسد</title>
+    <title>لعبة تحقيق الجريمة</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 20px;
-        }
-        header {
-            background: #ff7700;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        header p {
-            font-style: italic;
-        }
-        section {
-            margin: 20px 0;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .lion-img {
-            width: 100%;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #333;
-            color: #fff;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>حيوان الأسد</h1>
-            <p>الأسد هو أحد أقوى الحيوانات في مملكة الحيوان، ويشتهر بلقب "ملك الغابة".</p>
-        </div>
+        <h1>لعبة تحقيق الجريمة</h1>
+        <p>أنت المحقق في هذه القضية. اتبع الأدلة لحل اللغز!</p>
     </header>
-
-    <section class="info">
-        <div class="container">
-            <h2>معلومات عن الأسد</h2>
-            <p>الأسد هو نوع من القطط البرية التي تعيش في المناطق المفتوحة مثل السافانا والغابات في أفريقيا وبعض مناطق الهند. يعتبر الأسد رمزاً للقوة والشجاعة في العديد من الثقافات.</p>
-            <img src="https://images.app.goo.gl/mczDAwCZrxBHYsB37" alt="أسد في البرية" class="lion-img">
-        </div>
-    </section>
-
-    <section class="habitat">
-        <div class="container">
-            <h2>الأسد في البرية</h2>
-            <p>الأسود عادة ما تعيش في مجموعات تسمى "القطيع"، وهي قادرة على الصيد جماعيًا. تعيش الأسود في بيئات متنوعة، ولكنها عادة ما تتواجد في السافانا الأفريقية.</p>
-            <img src="https://www.w3schools.com/w3images/lion_savanna.jpg" alt="أسد في السافانا" class="lion-img">
-        </div>
-    </section>
-
-    <section class="cultural">
-        <div class="container">
-            <h2>الأسد في الثقافة</h2>
-            <p>الأسد يعد من الرموز الثقافية في العديد من الحضارات، وكان يرمز للقوة والملك في مصر القديمة. كما يعد رمزًا في العديد من الأساطير والأدب.</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Lion_Sculpture.jpg" alt="تمثال الأسد" class="lion-img">
-        </div>
-    </section>
-
+    <main>
+        <section id="story">
+            <h2>القضية</h2>
+            <p id="case-description">في ليلة غامضة، تم العثور على رجل ميت في مكتبه. الأدلة تشير إلى احتمال وجود جريمة. من هو القاتل؟</p>
+        </section>
+        <section id="evidence">
+            <h2>الأدلة</h2>
+            <ul>
+                <li onclick="showEvidence('note')">ملاحظة مكتوبة بخط يدوي</li>
+                <li onclick="showEvidence('glass')">كأس مكسور</li>
+                <li onclick="showEvidence('watch')">ساعة متوقفة عند وقت معين</li>
+            </ul>
+        </section>
+        <section id="suspects">
+            <h2>المشتبه بهم</h2>
+            <ul>
+                <li><button onclick="accuse('الشريك التجاري')">الشريك التجاري</button></li>
+                <li><button onclick="accuse('الخادمة')">الخادمة</button></li>
+                <li><button onclick="accuse('ابن الضحية')">ابن الضحية</button></li>
+            </ul>
+        </section>
+        <section id="result">
+            <h2>النتيجة</h2>
+            <p id="result-text">اختر أحد الأدلة أو اتهم أحد المشتبه بهم.</p>
+        </section>
+    </main>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 جميع الحقوق محفوظة</p>
-        </div>
+        <p>© 2024 لعبة التحقيق</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
